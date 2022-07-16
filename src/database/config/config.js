@@ -22,4 +22,10 @@ module.exports = {
     host: process.env.MYSQL_HOST,
     dialect: process.env.DIALECT,
   },
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 };
