@@ -3,7 +3,7 @@ const AssetSchema = (sequelize, DataTypes) => {
     paper: DataTypes.STRING,
     quantity: DataTypes.NUMBER,
     amount: DataTypes.NUMBER,
-  }, { timestamp: false });
+  }, { timestamps: false });
 
   return AssetTable;
 };
