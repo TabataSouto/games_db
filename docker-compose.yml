@@ -1,12 +1,11 @@
 version: "3"
-
 services:
   # Serviço que irá rodar o node
   node:
     # Imagem base do container
-    build: .
+    image: node:16
     # Nome do container para facilitar execução
-    container_name: store_manager
+    container_name: asset
     # Mesmo que `docker run -t`
     tty: true
     # Mesmo que `docker run -i`
@@ -16,13 +15,12 @@ services:
     # Restarta a imagem caso algo a faça parar
     restart: always
     # Diretório padrão de execução
-    working_dir: /home/node/app
+    working_dir: /app
     # Lista de volumes (diretórios) mapeados de fora para dentro do container
     volumes:
-      # Monta o diretório atual, com todos os dados do projeto, 
+      # Monta o diretório atual, com todos os dados do projeto,
       # dentro do diretório /app
-      - .:/home/node/app
-      - node_modules:/home/node/app/node_modules
+      - ./:/app
     # Lista de serviços do qual este serviço depende
     depends_on:
       # Precisa do banco funcionando antes de subir o node
@@ -39,11 +37,11 @@ services:
       MYSQL_DATABASE: DatabaseAssets
       MYSQL_HOST: db # Nome do service logo abaixo
       PORT: '3000'
-
   # Serviço que irá rodar o banco de dados
   db:
-    container_name: store_manager_db
-    image: mysql:5.7
+    container_name: asset_db
+    image: mysql:8.0.21
+    platform: linux/x86_64
     environment:
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
