@@ -17,8 +17,8 @@ services:
     ports:
       - ${PORT}:${PORT}
     environment:
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
       HOSTNAME: db
   db:
     container_name: assets_db
@@ -26,9 +26,9 @@ services:
     # platform: linux/x86_64
     restart: always
     ports:
-      - ${MYSQL_PORT}:${MYSQL_PORT}
+      - ${DB_PORT}:${DB_PORT}
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
 
 networks:
   default:
