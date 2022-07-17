@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:coverage": "nyc npm test",
     "dev": "nodemon index.js",
     "heroku": "node index.js",
-    "start": "npm run heroku",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "drop": "npx sequelize-cli db:drop",
+    "seed": "npx sequelize-cli db:seed:all",
+    "start": "npm run heroku"
   },
   "repository": {
     "type": "git",
