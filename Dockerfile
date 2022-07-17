@@ -1,11 +1,9 @@
-FROM node:16
+FROM node:latest
 
 WORKDIR /app
 
-COPY package.json .
+COPY package*.json .
 
-RUN apt-get update
-RUN apt-get install lsof
 RUN npm install
 
 COPY . .
