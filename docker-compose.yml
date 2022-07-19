@@ -15,10 +15,10 @@ services:
     depends_on:
       - db
     ports:
-      - ${PORT}:${PORT}
+      - 3000:3000
     environment:
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
       HOSTNAME: db
   db:
     container_name: assets_db
@@ -26,9 +26,9 @@ services:
     # platform: linux/x86_64
     restart: always
     ports:
-      - ${DB_PORT}:${DB_PORT}
+      - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: password
 
 networks:
   default:
