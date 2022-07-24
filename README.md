@@ -2,7 +2,7 @@
 ![Imagem da aplicação](https://i.postimg.cc/VsT8R8Lh/Screenshot-from-2022-07-24-17-04-55.png)
 
 # 💻 Descrição geral do projeto
-Desenvolvido individualmente para o utilização no desenvolvimento da aplicação front-end no desafio XP Inc. Criação de uma API com a rota /assets onde contém as principais informações de uma ação, como o nome (papel) e o valor de uma quantidade desta ação (valor unitário). Estas informações foram necessárias para a criação das tabelas em que as ações seriam disponibilizadas para venda na aplicação.
+Desenvolvido individualmente para utilização na aplicação front-end do desafio XP Inc. Criação de uma API com a rota /assets que contém as principais informações de uma ação, como o nome (ticker do papel) e o valor de uma quantidade desta ação (valor unitário). Estas informações foram necessárias para a criação das tabelas em que as ações seriam disponibilizadas para negociação na aplicação.
 
 # 🛠 Tecnologias:
 - Node.
@@ -48,7 +48,7 @@ Concluído
 O Deploy deste projeto foi realizado no [Heroku](https://asset-db-prsl-xp.herokuapp.com/assets).
 
 # 📚 Aprendizados:
-No primeiro momento, o deploy utilizando o banco de dados online disponibilizado pelo próprio heroku não deu certo. Sendo assim, realizei uma segunda tentativa utilizando o banco de dados online SUPABASE.
+No inicio, o deploy utilizando o banco de dados online disponibilizado pelo próprio heroku não funcionou conforme o esperado; sendo assim, realizei uma segunda tentativa utilizando o banco de dados online SUPABASE, onde obtive êxito.
 
 # 👧 Colaborador
 Tabata Caroline Souto
