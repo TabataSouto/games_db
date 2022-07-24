@@ -1,4 +1,4 @@
-# Stock Trader XP
+# Asset Database
 ![Imagem da aplicação](https://i.postimg.cc/VsT8R8Lh/Screenshot-from-2022-07-24-17-04-55.png)
 
 # 💻 Descrição geral do projeto
