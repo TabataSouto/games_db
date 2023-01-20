@@ -1,15 +1,15 @@
 const AssetDatabase = (sequelize, DataTypes) => {
   const AssetTable = sequelize.define(
-    'Asset',
+    'Game',
     {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
-      paper: DataTypes.STRING,
-      quantity: DataTypes.NUMBER,
-      amount: DataTypes.NUMBER,
+      name: DataTypes.STRING,
+      year: DataTypes.NUMBER,
+      console: DataTypes.NUMBER,
     },
     { timestamps: false },
   );
