@@ -11,7 +11,7 @@ const { PORT } = process.env;
 
 app.use(cors());
 app.use(express.json());
-app.use('/assets', router);
+app.use('/games', router);
 app.use(error);
 
 // eslint-disable-next-line no-console

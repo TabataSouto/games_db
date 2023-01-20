@@ -1,4 +1,4 @@
-const AssetDatabase = (sequelize, DataTypes) => {
+const GameDatabase = (sequelize, DataTypes) => {
   const AssetTable = sequelize.define(
     'Game',
     {
@@ -17,4 +17,4 @@ const AssetDatabase = (sequelize, DataTypes) => {
   return AssetTable;
 };
 
-module.exports = AssetDatabase;
+module.exports = GameDatabase;
