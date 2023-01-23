@@ -1,7 +1,7 @@
 import { Model, INTEGER, STRING, NUMBER } from 'sequelize';
 import db from '.';
 
-class User extends Model {
+class Games extends Model {
   id!: number;
   gameName!: string;
   year!: number;
@@ -9,7 +9,7 @@ class User extends Model {
   image!: string;
 }
 
-User.init({
+Games.init({
   id: {
     type: INTEGER,
     allowNull: false,
@@ -42,3 +42,5 @@ User.init({
   tableName: 'Games',
   timestamps: false,
 });
+
+export default Games;
