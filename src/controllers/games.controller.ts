@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import StatusCode from "../enums/statusCodes";
-import GamesService from "../services/games";
+import GamesService from "../services/games.service";
 
 export default class GamesController {
   private service: GamesService;

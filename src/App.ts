@@ -2,6 +2,7 @@ import 'express-async-errors';
 import express from 'express';
 import cors from 'cors';
 import httpErrorMiddleware from './middlewares/httpErrorMiddleware';
+import routerGames from './routes/games.router';
 
 export default class App {
   public app: express.Express;
@@ -22,6 +23,7 @@ export default class App {
     this.app.use(cors())
     this.app.use(express.json());
     this.app.use(acessControl);
+    this.app.use(routerGames);
     this.app.use(httpErrorMiddleware)
   };
 
