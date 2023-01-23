@@ -8,6 +8,8 @@ export default class GamesService {
   }
 
   public async getAllGames(): Promise<Games[]> {
-    return this.games.findAll();
+    const games = this.games.findAll() as any;
+    const resolvePromise: Games[] = await Promise.all(games);
+    return resolvePromise.sort((a, b) => a.year - b.year);
   }
 }
