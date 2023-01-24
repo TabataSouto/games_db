@@ -11,7 +11,7 @@ module.exports = {
           console: 'NES',
         },
         {
-          game_name: 'Four Swords Adventures',
+          game_name: 'The Legend of Zelda: Four Swords Adventures',
           year: 2004,
           price: 200.00,
           image: 'https://i.postimg.cc/m2GwSqwv/foursw-ords.jpg',
@@ -25,14 +25,14 @@ module.exports = {
           console: 'NES',
         },
         {
-          game_name: 'Tri Force Heroes',
+          game_name: 'The Legend of Zelda: Tri Force Heroes',
           year: 2015,
           price: 270.00,
           image: 'https://i.postimg.cc/Njt2Sv2c/tri-force-heroes.jpg',
           console: '3DS',
         },
         {
-          game_name: 'Phantom Hourglass',
+          game_name: 'The Legend of Zelda: Phantom Hourglass',
           year: 2007,
           price: 260.00,
           image: 'https://i.postimg.cc/qq0d0wsz/phantom-hourglass.jpg',

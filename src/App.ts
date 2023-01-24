@@ -10,6 +10,8 @@ export default class App {
   constructor() {
     this.app = express();
     this.config();
+    this.app.use(routerGames);
+    this.app.use(httpErrorMiddleware)
   }
 
   private config(): void {
@@ -20,11 +22,9 @@ export default class App {
       next();
     }
 
-    this.app.use(cors())
     this.app.use(express.json());
     this.app.use(acessControl);
-    this.app.use(routerGames);
-    this.app.use(httpErrorMiddleware)
+    this.app.use(cors())
   };
 
   public start(PORT: string | number): void {

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/Server.js",
-    "dev": "tsnd ./src/App.ts",
+    "start": "nodemon --watch \"./src/**\" ./src/server.ts",
+    "dev": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "build": "tsc"
   },
   "keywords": [],

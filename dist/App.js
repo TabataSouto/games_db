@@ -7,10 +7,13 @@ require("express-async-errors");
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const httpErrorMiddleware_1 = __importDefault(require("./middlewares/httpErrorMiddleware"));
+const games_router_1 = __importDefault(require("./routes/games.router"));
 class App {
     constructor() {
         this.app = (0, express_1.default)();
         this.config();
+        this.app.use(games_router_1.default);
+        this.app.use(httpErrorMiddleware_1.default);
     }
     config() {
         const acessControl = (_req, res, next) => {
@@ -19,10 +22,9 @@ class App {
             res.header('Access-Control-Allow-Headers', '*');
             next();
         };
-        this.app.use((0, cors_1.default)());
         this.app.use(express_1.default.json());
         this.app.use(acessControl);
-        this.app.use(httpErrorMiddleware_1.default);
+        this.app.use((0, cors_1.default)());
     }
     ;
     start(PORT) {
